@@ -10,5 +10,27 @@
     <ul>
         <li><a href="game.html"></a> game 페이지로 넘어가기</li>
     </ul>
+    <!-- 0513 공부내용 복습 -->
+    <input type="text" id="num1" placeholder="숫자입력..">
+    <span>+</span>
+    <input type="text" id="num2" placeholder="숫자입력..">
+    <span>=</span>
+    <strong id="result">결과값</strong>
+    <br>
+    <button onclick="OnPlus()">Plus</button>
+    <button onclick="OnClear()">Clear</button>
+    <script>
+        function OnPlus(){
+            var a = document.querySelector("#num1").value
+            var b = document.querySelector("#num2").value
+            var result = parseFloat(a)+parseFloat(b)
+            document.querySelector("#result").innerText=result
+        }
+        function OnClear(){
+            document.querySelector("#num1").value=""
+            document.querySelector("#num2").value=""
+            document.querySelector("#result").innerText=0
+        }
+    </script>
 </body>
 </html>
